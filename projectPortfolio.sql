@@ -25,8 +25,6 @@ create table [dbo].[Crime]
 [Half_of_the_year] int  null
 )
 
-drop table Crime
-
 select* into dbo.Crime from 
 openrowset(bulk 'C:\Users\HP\Desktop\EverSed\DataLeum\Crimesheet.csv', 
 FORMATFILE='C:\Users\HP\Desktop\EverSed\DataLeum\DataCrime.txt', FIRSTROW=2) as a;
